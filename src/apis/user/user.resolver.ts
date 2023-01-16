@@ -1,11 +1,17 @@
-import { Query, Resolver } from "@nestjs/graphql";
-
+import { Resolver, Query, Mutation } from '@nestjs/graphql';
+import { BoardService } from './user.service';
 
 @Resolver()
-export class FooResolver {
-  
+export class BoardResolver {
+  constructor(private readonly boardService: BoardService) {}
+
   @Query(() => String)
-  sayHello(): string {
-    return 'Hello World!';
+  fetchBoards(): string {
+    return this.boardService.findAll();
+  }
+
+  @Mutation(() => String)
+  createBoard(): string {
+    return this.boardService.create();
   }
 }
