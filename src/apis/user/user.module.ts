@@ -9,8 +9,6 @@ import { BoardService } from './user.service';
   providers: [
     BoardResolver, //
     BoardService,
-    
-
   ],
 })
 export class UserModule {}

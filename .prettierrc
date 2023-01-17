@@ -1,12 +1,12 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all",
-  "printWidth": 120,
-  "prettier/prettier": [
-    "error",
-    {},
-    {
-      "usePrettierrc": true
-    }
-  ]
-}
+    "singleQuote": true,
+    "trailingComma": "all",
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true
+      }
+    ]
+  }
+  
