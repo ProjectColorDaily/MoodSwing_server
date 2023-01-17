@@ -1,17 +1,16 @@
-import { Resolver, Query, Mutation } from '@nestjs/graphql';
-import { BoardService } from './user.service';
+import { Resolver, Mutation, Args, Query } from '@nestjs/graphql';
+import { signUpInput } from './dto/signgUp.input';
+import { User } from './entities/user.entity';
 
 @Resolver()
-export class BoardResolver {
-  constructor(private readonly boardService: BoardService) {}
-
+export class UserResolver {
   @Query(() => String)
-  fetchBoards(): string {
-    return this.boardService.findAll();
+  userInfo() {
+    return '유저정보';
   }
 
   @Mutation(() => String)
-  createBoard(): string {
-    return this.boardService.create();
+  signUp(@Args('signUpInput') signUpInput: signUpInput) {
+    return '회원가입이 완료 되었습니다.';
   }
 }

@@ -3,9 +3,16 @@
 # ------------------------------------------------------
 
 type Query {
-  fetchBoards: String!
+  userInfo: String!
 }
 
 type Mutation {
-  createBoard: String!
+  signUp(signUpInput: signUpInput!): String!
+}
+
+input signUpInput {
+  name: String!
+  email: String!
+  password: String!
+  birth: String
 }
