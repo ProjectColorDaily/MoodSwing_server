@@ -6,7 +6,7 @@ import { User } from './entities/user.entity';
 export class UserResolver {
   @Query(() => String)
   userInfo() {
-    return '유저정보';
+    return '유저정보 ㅎㅎㅎ';
   }
 
   @Mutation(() => String)
